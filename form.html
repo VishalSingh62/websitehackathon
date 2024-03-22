@@ -1,0 +1,81 @@
+<html>
+<head>
+    <style>
+        #confirmation-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+        }
+        h4{
+            text-align: left;
+        }
+    </style>
+         <link rel="stylesheet" href="style2.css"> 
+</head>
+<body>
+<div style="background-image: url(wp8003271.webp); background-repeat: no-repeat; background-size: cover; display: flex; justify-content: center;">
+
+<div class="contact_form">
+    <div><h4><a href="hospital website.html">HOME</a></h4></div>
+    <h2 style="text-align: center;">Student's Feedback</h2>
+    <div style="padding: 20px;">
+    <form id="myForm" onsubmit="submitForm(event)">
+        <div class="mid">
+            <label for="name"> Student's First Name</label>
+            <input type="text" id="name" name="contact" placeholder="Enter Your First Name" required>
+        </div>
+        <div class="mid">
+            <label for="name"> Student's last Name</label>
+            <input type="text" id="name" name="contact" placeholder="Enter Your Last Name" required>
+        </div>
+        <div class="mid">
+            <label for="phone">Student's Mobile No.</label>
+            <input type="tel" id="phone" name="contact" placeholder="Enter Your Mobile No." required>
+        </div>
+        <div class="mid">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="contact" placeholder="Enter Your Email" required>
+        </div>
+        <div class="mid">
+            <label for="visitDate">Date of Your Visit:</label>
+            <input type="date" id="visitDate" name="visitDate" required>
+        </div>
+        <div class="mid">
+            <label for="rating">Rate Your Experience (1-5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+        </div>
+        <div class="mid">
+            <label for="recommend">Would You Recommend Us?</label>
+            <select id="recommend" name="recommend" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="mid">
+            <label for="comment">Your Feedback:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+        </div>
+        <button onclick="submitForm()">Submit</button>
+    </form>
+
+    <!-- <div id="confirmation-message">Form submitted successfully!</div> -->
+        <script>
+            function submitForm() {
+                // Prevent the default form submission
+                alert("successfully submitted!")
+
+                // Show the confirmation message
+                document.getElementById('confirmation-message').style.display = 'block';
+1
+                // Reset the form after submission
+                document.getElementById('myForm').reset();
+            }
+        </script>
+</div>
+
+</div>
+</div>
+</body>
+</html>
